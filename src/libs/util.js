@@ -1,4 +1,4 @@
-console.log("archivo util");
+console.log("Util file");
 
 const isEmpty = (obj) => {
   if (obj == null) return true; // nulos y undefined son vacios

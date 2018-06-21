@@ -1,6 +1,4 @@
-/**
- * UTILS
- */
+'use strict'
 
 const Q = require('q');
 // const dao = require('../dao/dao');
@@ -41,10 +39,10 @@ const mensajeExito = (res, mensajeExito, codigo, datos) => {
   const codigoEnviar = codigo ? codigo : 200;
   return res.status(codigoEnviar).
     json({
-      finalizado: true,
-      mensaje: mensajeExito,
-      datos: datos ? datos : null,
-      fecha: moment().format(),
+      // finalizado: true,
+      // mensaje: mensajeExito,
+      shorthand: datos ? datos : null,
+      // fecha: moment().format(),
     });
 }
 //texto vacio?
@@ -108,6 +106,5 @@ module.exports = {
   mensajeError,
   mensajeExito,
   emptyText,
-  iterarArray,
-  // filterQuery,
+  iterarArray
 }

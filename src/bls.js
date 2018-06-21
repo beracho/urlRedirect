@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const consign = require('consign');
 
-console.log("Cargando archivos BLS");
+console.log("Loading BLS files");
 const bls = {};
 module.exports = app => {
   const dirBls = path.join(__dirname, "bls");

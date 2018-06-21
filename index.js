@@ -10,8 +10,6 @@ consign()
   .include('src/config/config.js')
   // carga las utilidades necesarias
   .then('src/libs/util.js')
-  // carga el módulo de notificaciones
-  .then('src/libs/notificaciones.js')
   //cargamos los handlers para peticiones personalizado
   .then('src/libs/handlers.js')
   //carga el modulo de BLS
@@ -24,8 +22,6 @@ consign()
   .then('src/libs/middlewares.js')
   // carga todas las rutas del api rest
   .then('src/routes')
-  //Declara Variables Globales
-  .then('src/libs/variables.js')
   // levanta todo el sistema
   .then('src/libs/boot.js')
   // finalmente todo lo ingresa a express

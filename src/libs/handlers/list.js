@@ -154,7 +154,7 @@ function init(model) {
         .set('Content-Range', `${start}-${end}/${count}`)
         .send({
           finalizado: true,
-          mensaje: "Obtención de datos exitosa.",
+          mensaje: "Successfull service response.",
           datos: {
             count: result.count,
             rows: res.transform(result.rows),

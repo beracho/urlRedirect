@@ -1,4 +1,4 @@
-console.log("configuracion de desarrollo activada");
+console.log("Production configuration activated");
 
 module.exports = {
   timezone: 'America/La_Paz',
