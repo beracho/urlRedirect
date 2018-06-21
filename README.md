@@ -29,7 +29,6 @@ To test, send GET to: 127.0.0.1:4000/shortgoogle
 Run the following commands
 * npm install 
 * npm run start
-* npm run test (to run test in the app)
 
 ### Who do I talk to? ###
 
