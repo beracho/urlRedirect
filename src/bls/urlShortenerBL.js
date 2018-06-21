@@ -17,15 +17,29 @@ const addUrl = (query, body, models) => {
       response = baseResponse + '_' + counter
       counter++
     }
+    response = UrlStorage.set(response, body.original_url)
   }
   if (response !== '') {
     deferred.resolve(response)
-
   } else {
     deferred.reject('Short hand allready used')
   }
   return deferred.promise;
 };
+
+const getOriginalUrl = (url) => {
+  const deferred = Q.defer();
+  const originalUrl = UrlStorage.get(url)
+  if (originalUrl !== undefined) {
+    deferred.resolve(originalUrl)
+  } else {
+    const error = {
+      message: url + ' not found...'
+    }
+    deferred.reject(error)
+  }
+  return deferred.promise;
+}
 
 function extractHostname(url) {
   var hostname;
@@ -45,5 +59,6 @@ function extractHostname(url) {
 }
 
 module.exports = {
-  addUrl
+  addUrl,
+  getOriginalUrl
 }

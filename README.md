@@ -1,6 +1,8 @@
 # README #
 
-ULR shortener server, it saves URLs related to it's shortened version, and returns the complete URL from the shortened one
+ULR shortener server, it saves URLs related to it's shortened version, and returns the complete URL from the shortened one.
+
+For one side if sent a shorthand it overwrites a possible existing one, on the other side if shorthand is ommited on petition, it generates a non existing string to save the original string in.
 
 ### What is this repository for? ###
 

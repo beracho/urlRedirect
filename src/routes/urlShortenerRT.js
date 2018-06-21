@@ -11,5 +11,14 @@ module.exports = app => {
         .catch(error => Util.mensajeError(res, error.message));
     });
 
-  // app.route("")
+  app.route("/:url")
+    .get((req, res) => {
+      urlShortenerBL.getOriginalUrl(req.params.url)
+        .then(respuesta => {
+          // Redirects to URL stored
+          res.writeHead(302, {'Location': respuesta});
+          res.end()
+        })
+        .catch(error => Util.mensajeError(res, error.message));
+    });
 };

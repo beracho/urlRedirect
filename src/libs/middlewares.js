@@ -11,8 +11,6 @@ const Q = require('q');
 const moment = require('moment');
 const Util = require('../utils/util');
 
-const fileUpload = require('express-fileupload');// Para subida de archivos
-
 module.exports = app => {
 
   const config = app.src.config.config; // Almacena el archivo de configuración.
@@ -70,10 +68,8 @@ module.exports = app => {
   // Aplica el uso de helmet con configuraciones de seguridad estandar.
   app.use(helmet({ frameguard: false }));
 
-  app.use(fileUpload());
-
-  app.use('/api', (req, res, next) => {
-    if (req.method !== 'OPTIONS') {
+  app.use('/', (req, res, next) => {
+    if (req.method !== 'OPTIONS' && req.method !== 'GET') {
       // Si el token no esta en la CABECERA
       if (!req.headers.authorization) {
         return Util.mensajeError(res, "Authentication failed, authorization token required", 403);

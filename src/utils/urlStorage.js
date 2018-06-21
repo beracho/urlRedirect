@@ -8,11 +8,7 @@ const set = (key, value) => {
 }
 
 const get = (key) => {
-  if (this.exist(key)) {
-    return dataStorage[key] 
-  } else {
-    return undefined
-  }
+  return dataStorage[key] 
 }
 
 const exist = (key) => {
