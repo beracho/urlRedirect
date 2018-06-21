@@ -1,0 +1,46 @@
+{
+  "name": "url_shortener",
+  "version": "1.0.0",
+  "description": "Backend server to short URL sent and redirect to saved ones",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "startdev": "nodemon index.js",
+    "test": "NODE_ENV=test FORCE=true node index.js && NODE_ENV=test mocha --timeout 30000 test/**/**/*.js"
+  },
+  "keywords": [
+    "URL shortener",
+    "Bene Studio"
+  ],
+  "author": "Adrian Marcelo Berazain Mallea",
+  "license": "ISC",
+  "homepage": "beracho.com",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "consign": "^0.1.2",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "express-fileupload": "^0.1.3",
+    "express-http-proxy": "^0.10.1",
+    "helmet": "^3.4.1",
+    "jwt-simple": "^0.5.0",
+    "konfig": "^0.2.1",
+    "moment": "^2.17.1",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.14.3",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.0.0",
+    "passport-ldapauth": "^0.5.0",
+    "path": "^0.12.7",
+    "q": "^1.4.1",
+    "request": "^2.78.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.7.0",
+    "istanbul": "^1.1.0-alpha.1",
+    "should": "^11.1.1",
+    "supertest": "^1.2.0"
+  }
+}

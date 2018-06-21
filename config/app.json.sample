@@ -1,0 +1,22 @@
+{
+  "development": {
+    "urlSistema": "http://localhost:8080",
+    "mapboxToken": "pk.eyJ1Ijoicm95MjM0IiwiYSI6ImNqNDVtY25hdjFyZG8zM3BhMnBwaDhkOHQifQ.0wfGth4IjfCtnwE1X1_t9w",
+    "hosts":
+    {
+        "ruta_rest_backend":"http://[host rest backend]"
+    },
+    "directorios": {
+    }
+  },
+  "production": {
+    "urlSistema": "http://localhost:8080",
+    "mapboxToken": "pk.eyJ1Ijoicm95MjM0IiwiYSI6ImNqNDVtY25hdjFyZG8zM3BhMnBwaDhkOHQifQ.0wfGth4IjfCtnwE1X1_t9w",
+    "hosts":
+    {
+        "ruta_rest_backend":"http://[host rest backend]"
+    },
+    "directorios": {
+    }
+  }
+}
